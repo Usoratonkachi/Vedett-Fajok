@@ -1,0 +1,287 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Dimension by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-gem"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Védett fajok</h1>
+								<p>Ismerd meg a védett fajokat és azok megóvásának fontosságát! Fedezd fel, hogyan járhatsz hozzá a természet védelméhez és a fenntartható jövőhöz.</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#celjaink">Céljaink</a></li>
+								<li><a href="#munkank">Munkánk</a></li>
+								<li><a href="#vedettjeink">Védettjeink</a></li>
+								<li><a href="#crud">CRUD</a></li>
+								<li><a href="#OOP">OOP</a></li>
+								<li><a href="#kapcsolat">Kapcsolat</a></li>
+								<!--<li><a href="#elements">Elements</a></li>-->
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Bemutatkozás -->
+							<article id="celjaink">
+								<h2 class="major">Céljaink</h2>
+								<span class="image main"><img src="images/bemutatkozas.jpg" alt="" /></span>
+								<p>Üdvözöllek az oldalunkon, amely Magyarország védett fajainak megőrzését tűzte ki céljául.</p>
+								<p>	Oldalunk arra hivatott, hogy felhívja a figyelmet a hazánkban található veszélyeztetett állat- és növényfajok védelmének fontosságára. Bemutatjuk Magyarország ritka és védett élőlényeit, élőhelyeiket és azokat a fenyegetéseket, amelyekkel szembenéznek. Emellett útmutatást nyújtunk, hogyan segíthetünk megőrzésükben, legyen szó akár mindennapi tevékenységeinkről, akár közösségi kezdeményezésekről.</a>.</p>
+								<p>Csatlakozz hozzánk, és fedezd fel a Kárpát-medence csodálatos és törékeny ökoszisztémáinak lakóit, hogy közösen tehessünk egy fenntarthatóbb jövőért.</p>
+							</article>
+
+						<!-- Munkánk -->
+							<article id="munkank">
+								<h2 class="major">Munkánk</h2>
+								<span class="image main"><img src="images/setodottmadar.jpg" alt="" /></span>
+								<p>Munkánk középpontjában Magyarország védett fajainak megőrzése áll. Rendszeresen felmérjük és monitorozzuk élőhelyeiket, valamint visszaállítjuk a sérült környezeteket, hogy biztosítsuk fajaink fennmaradását.</p>
+								<p>Oktatási programokat és kampányokat szervezünk, hogy növeljük a közösség tudatosságát, és önkénteseket vonunk be tevékenységeinkbe, így közösen tehetünk a természetvédelemért.</p>
+								<p>Modern technológiákat alkalmazunk a hatékonyabb munka érdekében, és együttműködünk partnereinkkel és támogatóinkkal, hogy a jövő generációi is megismerhessék és élvezhessék hazánk természeti kincseit.</p>
+							</article>
+
+						<!-- Védettjeink -->
+						<article id="vedettjeink">
+							<h2 class="major">Védettjeink</h2>
+							<form id="filter-form">
+								<div>
+									<label for="katid">Kategória:</label>
+									<select id="katid" name="katid">
+										<option value="">Összes</option>
+										<option value="1">Halak</option>
+										<option value="2">Körszájúak</option>
+										<option value="3">Madarak</option>
+										<option value="4">Kétéltűek</option>
+										<option value="5">Puhatestűek</option>
+										<option value="6">Hüllők</option>
+										<option value="7">Emlősök</option>
+										<option value="8">Ízeltlábúak</option>
+									</select>
+								</div>
+								
+								<div>
+									<label for="ertekid">Eszmei Érték:</label>
+									<select id="ertekid" name="ertekid">
+										<option value="">Összes</option>
+										<option value="1">100 000</option>
+										<option value="2">250 000</option>
+										<option value="3">500 000</option>
+										<option value="3">1 000 000</option>
+									</select>
+								</div>
+								
+								<div>
+									<label for="nev">Név:</label>
+									<input type="text" id="nev" name="nev" placeholder="Név alapján">
+								</div>
+						
+								<button type="submit">Szűrés</button>
+							</form>
+							<div id="adatbazis-container"></div>
+						</article>
+
+						<article id="crud">
+							<h2 class="major">CRUD műveletek</h2>
+						
+							<!-- Gombok az új állat felvitelére, módosításra, törlésre -->
+							<button id="show-create-form">Új Állat Felvétele</button>
+							<button id="read-button">Összes Állat</button>
+						
+							<!-- Create Form -->
+							<div id="create-form-container" style="display: none;">
+								<h3>Új Állat Felvétele</h3>
+								<form id="create-form">
+									<div>
+										<label for="create-nev">Név:</label>
+										<input type="text" id="create-nev" name="nev" required>
+									</div>
+									<div>
+										<label for="create-kategoria">Kategória:</label>
+										<select id="create-kategoria" name="katid" required>
+											<option value="">Válassz</option>
+											<option value="1">Halak</option>
+											<option value="2">Körszájúak</option>
+											<option value="3">Madarak</option>
+											<option value="4">Kétéltűek</option>
+											<option value="5">Puhatestűek</option>
+											<option value="6">Hüllők</option>
+											<option value="7">Emlősök</option>
+											<option value="8">Ízeltlábúak</option>
+										</select>
+									</div>
+									<div>	
+											<label for="creat-ertek">Eszmei Érték:</label>
+											<select id="create-ertekid" name="ertekid" required>
+											<option value="">Összes</option>
+											<option value="1">100 000</option>
+											<option value="2">250 000</option>
+											<option value="3">500 000</option>
+											<option value="3">1 000 000</option>
+										</select>
+										</div>
+									<div>
+										<label for="create-ev">Év:</label>
+										<input type="text" id="create-ev" name="ev" required>
+									</div>
+									<button type="submit">Létrehozás</button>
+								</form>
+							</div>
+						
+							<!-- Update Form -->
+							<div id="update-form-container" style="display: none;">
+								<h3>Állat Módosítása</h3>
+								<form id="update-form">
+									<div>
+										<label for="update-id">ID:</label>
+										<input type="text" id="update-id" name="id" required>
+									</div>
+									<div>
+										<label for="update-nev">Név:</label>
+										<input type="text" id="update-nev" name="nev">
+									</div>
+									<div>
+										<label for="update-kategoria">Kategória:</label>
+										<select id="update-kategoria" name="katid">
+											<option value="">Válassz</option>
+											<option value="1">Halak</option>
+											<option value="2">Körszájúak</option>
+											<option value="3">Madarak</option>
+											<option value="4">Kétéltűek</option>
+											<option value="5">Puhatestűek</option>
+											<option value="6">Hüllők</option>
+											<option value="7">Emlősök</option>
+											<option value="8">Ízeltlábúak</option>
+										</select>
+									</div>
+									<div>
+										<label for="update-ertek">Eszmei Érték:</label>
+										<select id="update-ertekid" name="ertekid" required>
+										<option value="">Összes</option>
+										<option value="1">100 000</option>
+										<option value="2">250 000</option>
+										<option value="3">500 000</option>
+										<option value="3">1 000 000</option>
+									</select>
+									</div>
+									<div>
+										<label for="update-ev">Év:</label>
+										<input type="text" id="update-ev" name="ev" required>
+									</div>
+									<button type="submit">Módosítás</button>
+								</form>
+							</div>
+						
+							<!-- Delete Form -->
+							<div id="delete-form-container" style="display: none;">
+								<h3>Állat Törlése</h3>
+								<form id="delete-form">
+									<div>
+										<label for="delete-id">ID:</label>
+										<input type="number" id="delete-id" name="id" required>
+									</div>
+									<button type="submit">Törlés</button>
+								</form>
+							</div>
+						
+							<!-- Read Section -->
+							<div id="read-container"></div>
+						</article>
+						
+						<article id="OOP">
+							<h2 class="major">Számológép</h2>
+						
+							<div id="calculator">
+								<form id="calculator-form">
+									<div>
+										<label for="number1">Szám 1:</label>
+										<input type="text" id="number1" name="number1" required>
+									</div>
+									<div>
+										<label for="operation">Művelet:</label>
+										<select id="operation" name="operation" required>
+											<option value="add">Összeadás</option>
+											<option value="subtract">Kivonás</option>
+										</select>
+									</div>
+									<div>
+										<label for="number2">Szám 2:</label>
+										<input type="text" id="number2" name="number2" required>
+									</div>
+									<button type="submit">Számítás</button>
+								</form>
+								<div id="result"></div>
+							</div>
+						</article>
+						
+				
+					
+						<!-- Kapcsolat -->
+						<article id="kapcsolat">
+							<h2 class="major">Kapcsolat</h2>
+							<form id="kapcsolat-form" method="post" action="/kapcsolat">
+								<div class="fields">
+									<div class="field half"><label for="name">Név</label><input type="text" name="name" id="name" required/></div>
+									<div class="field half"><label for="email">Email</label><input type="email" name="email" id="email" required/></div>
+									<div class="field"><label for="message">Üzenet</label><textarea name="message" id="message" rows="4"required></textarea></div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" class="primary" /></li>
+									<li><input type="reset" value="Reset" /></li>
+								</ul>
+								<ul class="actions"> <li><a href="uzenetek.html" class="button primary">Megnézem az üzeneteket</a></li> </ul> </article> <script> function submitForm() { const form = document.getElementById('kapcsolat-form'); const formData = new FormData(form); fetch('/kapcsolat', { method: 'POST', body: JSON.stringify({ name: formData.get('name'), email: formData.get('email'), message: formData.get('message') }), headers: { 'Content-Type': 'application/json' } }) .then(response => response.text()) .then(result => { alert(result); form.reset(); }) .catch(error => console.error('Error:', error)); } </script>
+							</form>
+						</article>
+						
+								<ul class="icons">
+									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="assets/js/szuro.js"></script> <!-- Külön JavaScript fájl behívása -->
+			<script src="assets/js/crud.js"></script>
+			<script src="assets/js/app.js"></script>
+	</body>
+</html>
